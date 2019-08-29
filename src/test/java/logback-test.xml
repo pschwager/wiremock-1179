@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration debug="false">
+    <appender name="CONSOLE" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>%d{HH:mm:ss.SSS} [%-5level] %logger - %msg%n%rEx</pattern>
+        </encoder>
+    </appender>
+    <root level="DEBUG">
+        <appender-ref ref="CONSOLE" />
+    </root>
+    <logger name="org.eclipse" level="WARN" />
+    <logger name="com.jayway" level="INFO" />
+    <logger name="org.apache.http" level="INFO" />
+</configuration>
