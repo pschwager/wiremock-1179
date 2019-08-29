@@ -1,0 +1,21 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/unknown",
+        "headers": {
+            "Authorization": {
+                "contains": "Bearer TestToken"
+            }
+        },// remove the bodypattern below and the test will be green
+         "bodyPatterns" : [ {
+            "equalToJson": "{'id' : 'a'}"
+        } ]
+    },
+    "response": {
+        "status": 200,
+        "jsonBody": {"affectedEntities": 3},
+        "headers": {
+            "Content-Type": "application/json;charset=UTF-8"
+        }
+    }
+}

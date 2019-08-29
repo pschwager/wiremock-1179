@@ -1,0 +1,27 @@
+{
+    "request": {
+        "method": "POST",
+        "url": "/upload",
+        "headers": {
+            "Content-Type": {
+                "contains": "multipart/form-data"
+            }
+        },
+        "multipartPatterns": [
+            {
+                "matchingType": "ANY",
+                "headers": {
+                    "Content-Disposition": {
+                        "contains": "wiremocktest"
+                    }
+                }
+            }
+        ]
+    },
+    "response": {
+        "status": 200,
+        "headers": {
+            "Content-Type": "application/json"
+        }
+    }
+}
